@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+
+	<low_skills>
+		<low_skill name="kick_right" firstPhase="kick_right_Phase0">
+			<type>kick</type>
+			<author>Andrej Sedlacek</author>
+			<extendedFromMove>kick_right</extendedFromMove>
+			<description>Player performs straight kick with right foot. Player is slightly rotating after every kick. Move is deprecated.</description>
+		</low_skill>
+	</low_skills>
+	
+	<phases>
+	<phase name="kick_right_Phase0" next="kick_right_Phase1">
+		<effectors>
+			<he1 end="0" />
+			<he2 end="0" />
+			<rae2 end="0" />
+			<lae2 end="0" />
+			<rae3 end="0" />
+			<lae3 end="0" />
+			<rae4 end="0" />
+			<lae4 end="0" />
+			
+			<!-- zakladna poloha noh -->
+			<rle1 end="0" />
+			<lle1 end="0" />
+			<rle2 end="0" />
+			<lle2 end="0" />
+			<rle6 end="0" />
+			<lle6 end="0" />
+			
+			<!-- ruky dolu -->
+			<rae1 end="-70"/>
+			<lae1 end="-70"/>
+			
+			<!-- pokrcenie kolien -->			 
+			<rle4 end="-70"/>
+			<lle4 end="-70"/>
+			
+			<rle5 end="40"/>
+			<lle5 end="40"/>
+			
+			<!-- torzo -->
+			<rle3 end="40"/>
+			<lle3 end="40"/>			
+		</effectors>
+		<duration>300</duration>	<!-- min okolo 300 -->		
+	</phase>
+	<phase name="kick_right_Phase1" next="kick_right_Phase2">
+		<effectors>
+		<!-- ruka doprava, clenky+bedra doprava, torzo mierne vpred? -->
+			
+			<!-- ruka -->
+			<lae1 end="-90"/>
+			<lae2 end="40"/>	
+			
+			<!-- clenky -->
+			<rle6 end="20"/>
+			<lle6 end="20"/>
+			
+			<!-- bedra -->
+			<rle2 end="-20"/>
+			<lle2 end="-20"/>
+			
+			<!-- torzo -->
+			<rle3 end="60"/>
+			<lle3 end="60"/>
+		</effectors>
+		<duration>350</duration>	<!-- min okolo 300 -->
+		
+	</phase>
+	<phase name="kick_right_Phase2" next="kick_right_Phase3">
+		<effectors>
+		<!-- lave bedro mierne, lave koleno+clenok velmi -->
+		
+		<!-- koleno+clenok -->
+		<rle4 end="-90"/>
+		<rle5 end="60"/>
+		
+		<!-- bedro -->
+		<rle3 end="40"/>
+			
+		</effectors>
+		<duration>300</duration>
+	</phase>
+	<phase name="kick_right_Phase3" next="kick_right_Phase4">
+		<effectors>
+			<!-- bedro vpred, spicku vystriet, mierne aj koleno? -->
+			
+			<!-- bedro -->
+			<rle3 end="100"/>
+			
+			<!-- koleno -->
+			<rle4 end="-75"/>
+			
+			<!-- spicka -->
+			<rle5 end="20"/>
+		</effectors>
+		<duration>200</duration>
+	</phase>
+	<phase name="kick_right_Phase4" isFinal="true">
+		<effectors>
+			<rle1 end="0" />
+			<lle1 end="0" />
+			<rle2 end="0" />
+			<lle2 end="0" />
+			<rle3 end="0" />
+			<lle3 end="0" />
+			<rle4 end="0" />
+			<lle4 end="0" />
+			<rle5 end="0" />
+			<lle5 end="0" />
+			<rle6 end="0" />
+			<lle6 end="0" />
+			<rae1 end="0"/>
+			<lae1 end="0"/>
+			<rae2 end="0"/>
+			<lae2 end="0"/>
+			<rae3 end="0"/>
+			<lae3 end="0"/>
+			<rae4 end="0"/>
+			<lae4 end="0"/>
+		</effectors>
+		<duration>750</duration>	<!-- este 600 je pomerne stabilne -->
+		<finalize>kick_right_Phase4</finalize>
+	</phase>
+	</phases>
+</robot>

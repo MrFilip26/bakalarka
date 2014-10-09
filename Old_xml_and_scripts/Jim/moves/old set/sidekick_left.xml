@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+
+<low_skills>
+	<low_skill name="sidekick_left" firstPhase="sidekick_left_Phase0">
+		<type>kick</type>
+		<author>Androids</author>
+		<extendedFromMove></extendedFromMove>
+		<description>Player performs sidekick to the right with inner side of left foot. Move is relatively slow and unstable. Overall performance is poor.</description>
+	</low_skill>
+</low_skills>
+
+<phases>
+	<phase name="sidekick_left_Phase0" next="sidekick_left_Phase1">
+		<effectors>
+			<he1 end="0" />
+			<he2 end="0" />
+			<rae2 end="0" />
+			<lae2 end="0" />
+			<rae3 end="0" />
+			<lae3 end="0" />
+			<rae4 end="0" />
+			<lae4 end="0" />
+			
+			<!-- base pose -->
+			<rle1 end="0" />
+			<lle1 end="0" />
+			<rle2 end="0" />
+			<lle2 end="0" />
+			<rle6 end="0" />
+			<lle6 end="0" />
+			
+			<!-- hands down -->
+			<rae1 end="-70"/>
+			<lae1 end="-70"/>
+			
+			<!-- lower knees -->			 
+			<rle4 end="-70"/>
+			<lle4 end="-70"/>
+			
+			<rle5 end="40"/>
+			<lle5 end="40"/>
+			
+			<!-- torzo -->
+			<rle3 end="40"/>
+			<lle3 end="40"/>			
+		</effectors>
+		<duration>300</duration>	<!-- min around 300 -->		
+	</phase>
+	<phase name="sidekick_left_Phase1" next="sidekick_left_Phase2">
+		<effectors>
+		<!-- ruka doprava, clenky+bedra doprava, torzo mierne vpred? -->
+			
+			<!-- hand -->
+			<rae1 end="-90"/>
+			<rae2 end="-40"/>	
+			
+			<!-- ankles -->
+			<rle6 end="-20"/>
+			<lle6 end="-20"/>
+			
+			<!-- hips -->
+			<rle2 end="20"/>
+			<lle2 end="20"/>
+			
+			<!-- torzo -->
+			<rle3 end="60"/>
+			<lle3 end="60"/>
+		</effectors>
+		<duration>350</duration>	<!-- min around 300 -->	
+	</phase>
+	<phase name="sidekick_left_Phase2" next="sidekick_left_Phase3">
+		<effectors>
+			<!-- left leg a little outside and forward - hips, knees down, ankle back -->
+			<!-- hips -->
+			<lle1 end="-25"/>
+			<lle2 end="20"/>
+			<lle3 end="80"/>
+			
+			<!-- knee -->
+			<lle4 end="-60"/>
+			
+			<!-- ankle -->
+			<lle5 end="10"/>
+		</effectors>
+		<duration>1000</duration>
+	</phase>
+	<phase name="sidekick_left_Phase3" next="sidekick_left_Phase4">
+		<effectors>
+			<!-- hips (1 and 2), balancing by moving to side, by hands -->
+			<lle1 end="0"/>
+			<lle2 end="0"/>
+			
+			<!-- hands -->
+			
+			<rae2 end="0"/>
+			<lae1 end="-70"/>
+			<lae2 end="40"/>
+			<lae4 end="-30"/>
+		</effectors>
+		<duration>300</duration>
+	</phase>
+	<phase name="sidekick_left_Phase4" isFinal="true">
+		<effectors>
+			<rle1 end="0" />
+			<lle1 end="0" />
+			<rle2 end="0" />
+			<lle2 end="0" />
+			<rle3 end="0" />
+			<lle3 end="0" />
+			<rle4 end="0" />
+			<lle4 end="0" />
+			<rle5 end="0" />
+			<lle5 end="0" />
+			<rle6 end="0" />
+			<lle6 end="0" />
+			
+			<rae1 end="0" />
+			<lae1 end="0" />
+			<rae2 end="0" />
+			<lae2 end="0" />
+			<rae3 end="0" />
+			<lae3 end="0" />
+			<rae4 end="0" />
+			<lae4 end="0" />
+		</effectors>
+		<duration>750</duration>	<!-- 600 is relatively stabile -->
+		<finalize>sidekick_left_Phase4</finalize>
+	</phase>
+</phases>
+
+</robot>

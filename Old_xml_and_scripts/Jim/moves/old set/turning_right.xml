@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+	<low_skills>
+		<low_skill name="turning_right" firstPhase="turning_right_1" />
+	</low_skills>
+	
+	<phases>
+		<phase name="turning_right_1" isFinal="true">
+			<effectors>
+				<rle1 end="-7" />
+				<lle2 end="7" />
+			</effectors>
+			<duration>150</duration>
+			<finalize>straighten</finalize>
+		</phase>
+	</phases>
+</robot>

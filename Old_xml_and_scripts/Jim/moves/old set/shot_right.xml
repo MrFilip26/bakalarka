@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor:Peter Passak
+Description: kicks the ball in front of the player forward as strong as possible
+phases:basic stance, step, kick, return to basic stance
+area of use: not yet specified
+parametrizable: looks like there is a posibility of changing the time to change the kick distance
+-->
+<robot xsi:noNamespaceSchemaLocation="moves.xsd">
+	<low_skills>
+		<low_skill name="shot_right" firstPhase="shot_right" />
+	</low_skills>
+	
+	<phases>
+		<!--1.pause before starting a move to minimize forces-->
+		<phase name="shot_right" next="shot_right1">
+			<effectors>
+			</effectors>
+			<duration>300</duration>
+		</phase>
+		<!--2.basic stance-->
+		<phase name="shot_right1" next="shot_right2">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="7" />
+				<lle2 end="-7" />
+				<rle3 end="55" />
+				<lle3 end="55" />
+				<rle4 end="-60" />
+				<lle4 end="-60" />
+				<rle5 end="30" />
+				<lle5 end="30" />
+				<rle6 end="-7" />
+				<lle6 end="7" />
+				<rae1 end="-90"/>
+				<lae1 end="-90"/>
+				<rae2 end="-10"/>
+				<lae2 end="10"/>
+				<rae3 end="90"/>
+				<lae3 end="-90"/>
+				<rae4 end="45"/>
+				<lae4 end="-45"/>
+			</effectors>
+			<duration>500</duration>
+		</phase>
+		<!--3.step with the non-kicking foot forward-->
+		<phase name="shot_right2"  next="shot_right3">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="7" />
+				<lle2 end="-7" />
+				<rle3 end="35" />
+				<lle3 end="55" />
+				<rle4 end="-60" />
+				<lle4 end="-100" />
+				<rle5 end="30" />
+				<lle5 end="50" />
+				<rle6 end="-7" />
+				<lle6 end="7" />
+			</effectors>
+			<duration>500</duration>
+		</phase>
+		<!--4.moving weigth on the non-kicking foot-->
+		<phase name="shot_right3"  next="shot_right4">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="7" />
+				<lle2 end="-7" />
+				<rle3 end="10" />
+				<lle3 end="65" />
+				<rle4 end="-60" />
+				<lle4 end="-40" />
+				<rle5 end="60" />
+				<lle5 end="-15" />
+				<rle6 end="-7" />
+				<lle6 end="7" />
+			</effectors>
+			<duration>750</duration>
+		</phase>
+		<!--5.moving weigth on the non-kicking foot-->
+		<phase name="shot_right4"  next="shot_right5">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="7" />
+				<lle2 end="-7" />
+				<rle3 end="0" />
+				<lle3 end="55" />
+				<rle4 end="-30" />
+				<lle4 end="-40" />
+				<rle5 end="40" />
+				<lle5 end="10" />
+				<rle6 end="-7" />
+				<lle6 end="7" />
+			</effectors>
+			<duration>750</duration>
+		</phase>
+		<!--6.lifting the kicking foot-->
+		<phase name="shot_right5"  next="shot_right6">
+			<effectors>
+				<rle1 end="-25" />
+				<lle1 end="-25" />
+				<rle2 end="-20" />
+				<lle2 end="-20" />
+				<rle3 end="-25" />
+				<lle3 end="100" />
+				<rle4 end="-120" />
+				<lle4 end="0" />
+				<rle5 end="45" />
+				<lle5 end="-5" /><!--change by twenty throws the agent of balance-->
+				<rle6 end="15" />
+				<lle6 end="15"  />
+			</effectors>
+			<duration>1000</duration>
+		</phase>
+		<!--7.kick-->
+		<phase name="shot_right6" next="shot_right6b">
+			<effectors>
+				<rle1 end="-10" />
+				<lle1 end="-10" />
+				<rle2 end="-20" />
+				<lle2 end="-20" />
+				<rle3 end="5" />
+				<lle3 end="55" />
+				<rle4 end="-115" />
+				<lle4 end="0" />
+				<rle5 end="55" />
+				<rle6 end="15" />
+				<lle6 end="15" />
+			</effectors>
+			<duration>129</duration>
+		</phase>
+		<phase name="shot_right6b"  next="shot_right6c">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="-22" />
+				<lle2 end="-22" />
+				<rle3 end="25" />
+				<lle3 end="35" />
+				<rle4 end="-105" />
+				<lle4 end="0" />
+				<rle5 end="55" />
+				<lle5 end="-5" /><!--change by twenty throws the agent of balance-->
+				<rle6 end="15" />
+				<lle6 end="15" />
+			</effectors>s
+			<duration>57</duration>
+		</phase>
+		<phase name="shot_right6c" next="shot_right6d">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="-25" />
+				<lle2 end="-25" />
+				<rle3 end="55" />
+				<lle3 end="5" />
+				<rle4 end="-75" />
+				<lle4 end="-10" />
+				<rle5 end="25" />
+				<lle5 end="-5" /><!--change by twenty throws the agent of balance-->
+				<rle6 end="15" />
+				<lle6 end="15" />
+			</effectors>
+			<duration>86</duration>
+		</phase>
+		<phase name="shot_right6d" next="shot_right6e">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="-25" />
+				<lle2 end="-25" />
+				<rle3 end="75" />
+				<lle3 end="-15" />
+				<rle4 end="-55" />
+				<lle4 end="-30" />
+				<rle5 end="5" />
+				<lle5 end="-5" /><!--change by twenty throws the agent of balance-->
+				<rle6 end="15" />
+				<lle6 end="15" />
+				<rae1 end="-70"/>
+				<lae1 end="-70"/>
+			</effectors>
+			<duration>40</duration>
+		</phase>
+		<phase name="shot_right6e"  isFinal="true">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="-25" />
+				<lle2 end="-25" />
+				<rle3 end="95" />
+				<lle3 end="25" />
+				<rle4 end="-35" />
+				<lle4 end="-50" />
+				<rle5 end="-15" />
+				<lle5 end="25" /><!--change by twenty throws the agent of balance-->
+				<rle6 end="15" />
+				<lle6 end="15" />
+				<rae1 end="0"/>
+				<lae1 end="0"/>
+				<rae2 end="-10"/>
+				<lae2 end="10"/>
+				<rae3 end="90"/>
+				<lae3 end="-90"/>
+				<rae4 end="45"/>
+				<lae4 end="-45"/>
+			</effectors>
+			<duration>40</duration>
+			<finalize>shot_right_final</finalize>
+		</phase>
+		<!--8.basic stance-->
+		<phase name="shot_right_final" isFinal="true">
+			<effectors>
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="7" />
+				<lle2 end="-7" />
+				<rle3 end="55" />
+				<lle3 end="55" />
+				<rle4 end="-60" />
+				<lle4 end="-60" />
+				<rle5 end="30" />
+				<lle5 end="30" />
+				<rle6 end="-7" />
+				<lle6 end="7" />
+				<rae1 end="-90"/>
+				<lae1 end="-90"/>
+				<rae2 end="-10"/>
+				<lae2 end="10"/>
+				<rae3 end="90"/>
+				<lae3 end="-90"/>
+				<rae4 end="45"/>
+				<lae4 end="-45"/>
+			</effectors>
+			<duration>500</duration>
+			<finalize>shot_right_final</finalize>
+		</phase>
+	</phases>
+</robot>

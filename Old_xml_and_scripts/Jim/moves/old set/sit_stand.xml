@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+  <constants>
+    <!--konstanty sem-->
+  </constants>
+  <low_skills>
+    <low_skill name="sit_stand" firstPhase="sit_stand_Phase0">
+		<type>other</type>
+		<author>Androids</author>
+		<extendedFromMove></extendedFromMove>
+		<description>Player performs the sitting move and in the middle of it stands up. This move is not useful and it's unstable.</description>
+	</low_skill>
+  </low_skills>
+  <phases>
+    <phase name="sit_stand_Phase0" next="sit_stand_Phase1">
+     <effectors>
+        <rae1 end="-35" />
+        <lae1 end="-35" />
+        <rle3 end="35" />
+        <lle3 end="35" />
+        <rle5 end="15" />
+        <lle5 end="15" />
+        <lle4 end="-45" />
+        <rle4 end="-45" />
+      </effectors>
+      <duration>150</duration>
+    </phase>
+    <phase name="sit_stand_Phase1" next="sit_stand_Phase2">
+      <effectors>
+        <lle3 end="45" />
+        <rle6 end="10" />
+        <lle6 end="-10" />
+        <rle3 end="45" />
+        <lle1 end="-10" />
+        <rle1 end="-10" />
+        <lle2 end="10" />
+        <rle2 end="-10" />
+        <rle4 end="-60" />
+        <lle4 end="-60" />
+      </effectors>
+      <duration>200</duration>
+    </phase>
+    <phase name="sit_stand_Phase2" next="sit_stand_Phase3">
+      <effectors>
+        <rle6 end="20" />
+        <lle6 end="-20" />
+        <lle1 end="-20" />
+        <rle1 end="-20" />
+        <lle2 end="30" />
+        <rle2 end="-30" />
+        <lle4 end="-40" />
+        <rle4 end="-40" />
+        <lle5 end="0" />
+        <rle5 end="0" />
+      </effectors>
+      <duration>200</duration>
+    </phase>
+    <phase name="sit_stand_Phase3" next="sit_stand_Phase4">
+      <effectors>
+        <rle1 end="-35" />
+        <lle1 end="-35" />
+        <rle2 end="-35" />
+        <lle2 end="35" />
+        <rle6 end="35" />
+        <lle6 end="-35" />
+        <lle3 end="40" />
+        <rle3 end="40" />
+        <lle5 end="-10" />
+        <rle5 end="-10" />
+      </effectors>
+      <duration>200</duration>
+    </phase>
+    <phase name="sit_stand_Phase4" next="sit_stand_Phase5">
+      <effectors>
+        <lle5 end="-20" />
+        <rle5 end="-20" />
+        <lle4 end="-55" />
+        <rle4 end="-55" />
+        <lle6 end="-40" />
+        <rle6 end="40" />
+        <rle2 end="-40" />
+        <lle2 end="40" />
+        <lle1 end="-50" />
+        <rle1 end="-50" />
+        <lle3 end="55" />
+        <rle3 end="55" />
+      </effectors>
+      <duration>200</duration>
+    </phase>
+    <phase name="sit_stand_Phase5" isFinal="true">
+      <effectors>
+				<he2 end="0" />
+				
+				<rae1 end="-90"/>
+				<lae1 end="-90"/>
+				<rae2 end="-10"/>
+				<lae2 end="10"/>
+				<rae3 end="80"/>
+				<lae3 end="-80"/>
+				<rae4 end="60"/>
+				<lae4 end="-60"/>
+				
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="0" />
+				<lle2 end="0" />
+				<rle3 end="40" />
+				<lle3 end="40" />
+				<rle4 end="-60" />
+				<lle4 end="-60" />
+				<rle5 end="30" />
+				<lle5 end="30" />
+				<rle6 end="0" />
+				<lle6 end="0" />
+      </effectors>
+      <duration>600</duration>
+      <finalize>sit_stand_Phase5</finalize>
+    </phase>
+  </phases>
+</robot>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+  <constants>
+    <!--konstanty sem-->
+  </constants>
+  <low_skills>
+    <low_skill name="turnright30" firstPhase="turnright30_Phase0">
+			<type>rotation</type>
+			<author>Gabor Nagy (A55 Kickers)</author>
+			<extendedFromMove>turnleft30</extendedFromMove>
+			<description>Player turns 30 degrees to the right. Move is stable and normal speed.</description>
+		</low_skill>
+  </low_skills>
+  
+  <phases>
+    <phase name="turnright30_Phase0" next="turnright30_Phase1">
+      <effectors>
+		<he1 end="0" />
+		<he2 end="0" />
+		
+        <rae1 end="-120" />
+        <lae1 end="-120" />
+		<rae2 end="0" />
+		<lae2 end="0" />
+        <rae3 end="90" />
+        <lae3 end="-90" />
+        <rae4 end="90" />
+        <lae4 end="-90" />
+		
+		<rle1 end="0" />
+		<lle1 end="0" />
+		<rle2 end="0" />
+		<lle2 end="0" />
+        <lle3 end="40" />
+        <rle3 end="20" />
+        <lle4 end="-40" />
+        <rle4 end="-20" />
+        <rle5 end="20" />
+        <lle5 end="20" />
+        <lle6 end="10" />
+		<rle6 end="0" />
+      </effectors>
+      <duration>600</duration>
+    </phase>
+    <phase name="turnright30_Phase1" next="turnright30_Phase2">
+      <effectors>
+        <lle1 end="-43" />
+        <rle1 end="-29" />
+        <lle2 end="-8" />
+        <lle3 end="20" />
+        <lle5 end="25" />
+        <lle6 end="15" />
+		<rle6 end="0" />
+      </effectors>
+      <duration>300</duration>
+    </phase>
+    <phase name="turnright30_Phase2" next="turnright30_Phase3">
+      <effectors>
+        <lle6 end="-10" />
+        <rle5 end="0" />
+        <lle4 end="-30" />
+        <lle5 end="5" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="turnright30_Phase3" next="turnright30_Phase4">
+      <effectors>
+		<rle1 end="0" />
+		<lle1 end="0" />
+		<rle2 end="0" />
+		<lle2 end="0" />
+        <lle3 end="0" />
+        <rle3 end="20" />
+        <lle4 end="-10" />
+        <rle4 end="-30" />
+        <rle5 end="20" />
+        <lle5 end="20" />
+        <rle6 end="0" />
+		<lle6 end="0" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+	<phase name="turnright30_Phase4" isFinal="true">
+      <effectors>
+		<he1 end="0" />
+		<he2 end="0" />
+		
+        <rae1 end="-120" />
+        <lae1 end="-120" />
+		<rae2 end="0" />
+		<lae2 end="0" />
+        <rae3 end="90" />
+        <lae3 end="-90" />
+        <rae4 end="90" />
+        <lae4 end="-90" />
+		
+		<rle1 end="0" />
+		<lle1 end="0" />
+		<rle2 end="0" />
+		<lle2 end="0" />
+        <rle3 end="0" />
+        <lle3 end="0" />
+        <rle4 end="0" />
+        <lle4 end="0" />
+        <rle5 end="0" />
+        <lle5 end="0" />
+        <rle6 end="0" />
+		<lle6 end="0" />
+      </effectors>
+      <duration>600</duration>
+      <finalize>turnright30_Phase5</finalize>
+    </phase>
+	<phase name="turnright30_Phase5" isFinal="true">
+      <effectors>
+       
+      </effectors>
+      <duration>200</duration>
+      <finalize>turnright30_Phase0</finalize>
+    </phase>
+  </phases>
+</robot>

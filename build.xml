@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="robocup" basedir="." >
+	
+	<property name="Jim.location" value="Jim" />
+	<property name="TestFramework.location" value="TestFramework" />
+	<property name="RoboCupLibrary.location" value="RoboCupLibrary" />
+
+	<import file="Jim/build.xml"/>
+</project>
+

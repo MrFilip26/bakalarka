@@ -1,0 +1,21 @@
+# Eclipse
+.classpath
+.project
+.settings/
+nbbuild.xml
+*.iml
+.idea
+.metadata
+
+bin/*
+movecache
+*.log
+*.log1
+*.log2
+*.log3
+*.log.*
+
+release/*
+tests/*
+/bin
+fixtures/test_log.txt

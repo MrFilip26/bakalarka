@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+  <constants>
+    <!--konstanty sem-->
+  </constants>
+  <low_skills>
+    <low_skill name="stepright1" firstPhase="stepright1_Phase0">
+		<type>walk</type>
+		<author>Androids</author>
+		<extendedFromMove>stepright</extendedFromMove>
+		<description>Player performs one step to the right side. This move is slow but moere stable than stepright.</description>
+	</low_skill>
+  </low_skills>
+  <phases>
+    <phase name="stepright1_Phase0" next="stepright1_Phase1">
+      <effectors>
+	<he1 end="0" />
+	<he2 end="0" />
+	<rae2 end="0" />
+	<lae2 end="0" />
+	<rle1 end="0" />
+	<lle1 end="0" />
+	<rle2 end="0" />
+	<lle2 end="0" />
+	<rle6 end="0" />
+	<lle6 end="0" />
+        <lle4 end="-20" />
+        <rle4 end="-20" />
+        <lle3 end="20" />
+        <lle5 end="20" />
+        <rle5 end="20" />
+        <rle3 end="20" />
+        <rae3 end="90" />
+        <lae1 end="-120" />
+        <rae1 end="-120" />
+        <lae4 end="-90" />
+        <rae4 end="90" />
+        <lae3 end="-90" />
+      </effectors>
+      <duration>600</duration>
+    </phase>
+    <phase name="stepright1_Phase1" next="stepright1_Phase2">
+      <effectors>
+        <lle3 end="30" />
+        <lle4 end="-40" />
+        <lle5 end="25" />
+        <lle6 end="15" />
+        <rle5 end="10" />
+      </effectors>
+      <duration>800</duration>
+    </phase>
+    <phase name="stepright1_Phase2" next="stepright1_Phase3">
+      <effectors>
+        <rle1 end="-10" />
+        <rle3 end="25" />
+        <rle2 end="-30" />
+        <rle4 end="-40" />
+        <rle5 end="20" />
+        <rle6 end="20" />
+        <lle4 end="-60" />
+        <lle5 end="30" />
+        <lle3 end="35" />
+      </effectors>
+      <duration>600</duration>
+    </phase>
+    <phase name="stepright1_Phase3" next="stepright1_Phase4">
+      <effectors>
+        <lle6 end="0" />
+        <lle1 end="-5" />
+      </effectors>
+      <duration>700</duration>
+    </phase>
+    <phase name="stepright1_Phase4" next="stepright1_Phase5">
+      <effectors>
+        <rle4 end="-50" />
+        <rle5 end="45" />
+        <rle6 end="15" />
+        <lle4 end="-30" />
+        <lle5 end="20" />
+        <lle3 end="30" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="stepright1_Phase5" next="stepright1_Phase6">
+      <effectors>
+        <rle3 end="30" />
+        <rle4 end="-70" />
+        <rle5 end="50" />
+        <lle5 end="10" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="stepright1_Phase6" next="stepright1_Phase7">
+      <effectors>
+        <rle2 end="-20" />
+        <rle6 end="-5" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="stepright1_Phase7" next="stepright1_Phase8">
+      <effectors>
+        <rle1 end="-15" />
+        <rle3 end="35" />
+        <rle2 end="-10" />
+        <rle4 end="-80" />
+        <rle6 end="-5" />
+        <lle4 end="-50" />
+        <lle5 end="30" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="stepright1_Phase8" next="stepright1_Phase0" isFinal="true">
+      <effectors>
+        <lle4 end="0" />
+        <rle4 end="0" />
+        <lle3 end="0" />
+        <lle5 end="0" />
+        <rle5 end="0" />
+        <rle3 end="0" />
+        <lle1 end="0" />
+        <rle1 end="0" />
+        <lle2 end="0" />
+        <rle2 end="0" />
+        <lle6 end="0" />
+        <rle6 end="0" />
+      </effectors>
+      <duration>800</duration>
+      <finalize>straighten</finalize>
+    </phase>
+  </phases>
+</robot>

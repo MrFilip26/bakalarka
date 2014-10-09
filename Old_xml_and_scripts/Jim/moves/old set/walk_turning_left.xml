@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+	<low_skills>
+		<low_skill name="walk_turning_left" firstPhase="walk_turning_left_1" />
+	</low_skills>
+	
+	<phases>
+		<phase name="walk_turning_left_1" next="walk_turning_left_2">
+			<effectors>
+				<he1 end="0" />
+				<he2 end="0" />
+				
+				<rae1 end="-90"/>
+				<lae1 end="-90"/>
+				<rae2 end="-10"/>
+				<lae2 end="10"/>
+				<rae3 end="80"/>
+				<lae3 end="-80"/>
+				<rae4 end="60"/>
+				<lae4 end="-60"/>
+				
+				<rle1 end="0" />
+				<lle1 end="0" />
+				<rle2 end="7" />
+				<lle2 end="-7" />
+				<rle3 end="50" />
+				<lle3 end="50" />
+				<rle4 end="-60" />
+				<lle4 end="-60" />
+				<rle5 end="30" />
+				<lle5 end="30" />
+				<rle6 end="-7" />
+				<lle6 end="7" />
+			</effectors>
+			<duration>400</duration>
+		</phase>
+		<phase name="walk_turning_left_2" next="walk_turning_left_3">
+			<effectors>
+			<rae1 end="-90"/>
+			<lae1 end="-90"/>
+			
+			<rle3 end="70" />
+			<rle4 end="-80" />
+			<rle5 end="40" />
+			<lle3 end="50" />
+			<lle4 end="-60" />
+			<lle5 end="30" />
+			</effectors>
+			<duration>120</duration>
+		</phase>
+		<phase name="walk_turning_left_3" next="walk_turning_left_4">
+			<effectors>
+			<rae1 end="-110"/>
+			<lae1 end="-70"/>
+			
+			<rle3 end="50" />
+			<rle4 end="-60" />
+			<rle5 end="30" />
+			<lle3 end="45" />
+			<lle4 end="-70" />
+			<lle5 end="40" />
+			</effectors>
+			<duration>120</duration>
+		</phase>
+		<phase name="walk_turning_left_4" next="walk_turning_left_5">
+			<effectors>
+			<rae1 end="-90"/>
+			<lae1 end="-90"/>
+			
+			<rle1 end="-5" />
+			<lle3 end="70" />
+			<lle4 end="-80" />
+			<lle5 end="40" />
+			<rle3 end="50" />
+			<rle4 end="-60" />
+			<rle5 end="30" />
+			</effectors>
+			<duration>120</duration>
+		</phase>
+		<phase name="walk_turning_left_5" next="walk_turning_left_2">
+			<effectors>
+			<rae1 end="-70"/>
+			<lae1 end="-110"/>
+			
+			<rle1 end="0" />
+			<lle3 end="50" />
+			<lle4 end="-60" />
+			<lle5 end="30" />
+			<rle3 end="45" />
+			<rle4 end="-70" />
+			<rle5 end="40" />
+			</effectors>
+			<duration>120</duration>
+		</phase>
+	</phases>
+</robot>

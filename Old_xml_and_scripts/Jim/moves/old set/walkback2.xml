@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moves.xsd">
+  <constants>
+    <!--konstanty sem-->
+  </constants>
+  <low_skills>
+    <low_skill name="walkback2" firstPhase="walkback2_Phase0">
+		<type>walk</type>
+		<author>Androids</author>
+		<extendedFromMove>walkback</extendedFromMove>
+		<description>Player performs backward walk. Move slow and not so stable.</description>
+	</low_skill>
+  </low_skills>
+  <phases>
+    <phase name="walkback2_Phase0" next="walkback2_Phase1">
+      <effectors>
+	<he1 end="0" />
+	<he2 end="0" />
+	<rae2 end="0" />
+	<lae2 end="0" />
+	<rle1 end="0" />
+	<lle1 end="0" />
+	<rle2 end="0" />
+	<lle2 end="0" />
+	<rle6 end="0" />
+	<lle6 end="0" />
+        <lle4 end="-30" />
+        <rle4 end="-30" />
+        <lle3 end="40" />
+        <rle3 end="40" />
+        <rle5 end="20" />
+        <lle5 end="20" />
+        <rae3 end="90" />
+        <lae1 end="-120" />
+        <rae1 end="-120" />
+        <lae3 end="-90" />
+        <lae4 end="-90" />
+        <rae4 end="90" />
+      </effectors>
+      <duration>600</duration>
+    </phase>
+    <phase name="walkback2_Phase1" next="walkback2_Phase2">
+      <effectors>
+        <lle5 end="-5" />
+        <rle4 end="-40" />
+        <rle3 end="30" />
+        <rle5 end="25" />
+        <rle6 end="-10" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="walkback2_Phase2" next="walkback2_Phase3">
+      <effectors>
+        <lle3 end="40" />
+        <lle4 end="-60" />
+        <lle5 end="35" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="walkback2_Phase3" next="walkback2_Phase4" isFinal="true">
+      <effectors>
+        <lle4 end="0" />
+        <rle4 end="0" />
+        <lle3 end="0" />
+        <rle3 end="0" />
+        <rle5 end="0" />
+        <lle5 end="0" />
+        <rle6 end="0" />
+        <lle6 end="0" />
+      </effectors>
+      <duration>600</duration>
+      <finalize>straighten</finalize>
+    </phase>
+    <phase name="walkback2_Phase4" next="walkback2_Phase5">
+      <effectors>
+        <lle4 end="-30" />
+        <rle4 end="-30" />
+        <lle3 end="40" />
+        <rle3 end="40" />
+        <rle5 end="20" />
+        <lle5 end="20" />
+      </effectors>
+      <duration>600</duration>
+    </phase>
+    <phase name="walkback2_Phase5" next="walkback2_Phase6">
+      <effectors>
+        <rle5 end="-5" />
+        <lle4 end="-40" />
+        <lle3 end="30" />
+        <lle5 end="25" />
+        <lle6 end="10" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="walkback2_Phase6" next="walkback2_Phase7">
+      <effectors>
+        <rle3 end="40" />
+        <rle4 end="-60" />
+        <rle5 end="35" />
+      </effectors>
+      <duration>500</duration>
+    </phase>
+    <phase name="walkback2_Phase7" next="walkback2_Phase0" isFinal="true">
+      <effectors>
+        <lle4 end="0" />
+        <rle4 end="0" />
+        <lle3 end="0" />
+        <rle3 end="0" />
+        <rle5 end="0" />
+        <lle5 end="0" />
+        <rle6 end="0" />
+        <lle6 end="0" />
+      </effectors>
+      <duration>600</duration>
+      <finalize>straighten</finalize>
+    </phase>
+  </phases>
+</robot>
